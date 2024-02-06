@@ -1,16 +1,15 @@
 ---
-
+import Layout from "../components/Layout.astro";
+import FlowTimerCard from "@components/FlowTimerCard.astro";
+import ContainerScroll from "@components/ContainerScroll.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<FlowTimerCard />
+
+	<div class="block lg:hidden 2xl:block overflow-auto no-scrollbar">
+		<ContainerScroll>
+			<h2 class="font-thin leading-extra-loose md:text-lg 2xl:text-xl text-light-blue-dark dark:text-dark-blue-light">Coming Soon</h2>
+		</ContainerScroll>
+	</div>
+</Layout>
